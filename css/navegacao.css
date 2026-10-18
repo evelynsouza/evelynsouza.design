@@ -1,0 +1,7 @@
+/* Navegação interna — comportamento compartilhado por todas as páginas do portfólio.
+   Mesmo padrão da página inicial: rolagem suave nativa do navegador,
+   desativada quando o usuário prefere movimento reduzido. */
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+/* Destinos de âncora param abaixo do cabeçalho fixo (76px) */
+[id]{scroll-margin-top:76px}
+#topo{scroll-margin-top:0}
