@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRFLOG — monitoramento logístico — Evelyn Souza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/navegacao.css">
+<link rel="stylesheet" href="css/case-brflog.css">
+</head>
+<body>
+<div class="shell">
+<div class="site" id="topo">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="index.html"><span class="brand-name">Evelyn Souza</span><span class="brand-sep" aria-hidden="true"></span><span class="brand-role">UX Specialist &amp; Product Designer</span></a>
+      <div class="nav-wrap">
+        <nav class="nav" id="menu" aria-label="Principal">
+          <a href="index.html" aria-current="page" data-click="go-projects">Projetos</a>
+          <a href="sobre.html" data-click="close-menu">Sobre</a>
+          <a href="#contato" data-click="close-menu">Contato</a>
+        </nav>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <button class="theme-btn" type="button" aria-label="Tema escuro" aria-pressed="false" data-click="toggle-theme">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"></path></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"></path></svg>
+        </button>
+        <button class="menu-btn" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false" data-click="toggle-menu"><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Capa -->
+    <header class="wrap" aria-labelledby="case-title">
+      <a class="back intro" href="index.html"><span class="arr" aria-hidden="true">←</span> Todos os projetos</a>
+      <div class="grid open">
+        <p class="eyebrow intro intro-2" style="grid-column: 1 / -1"><span class="n">Case 03</span><span>BRF</span><span>Monitoramento logístico</span></p>
+        <h1 id="case-title" class="open-title is-brand intro intro-2">BRFLOG</h1>
+        <p class="open-sub intro intro-3">Conectando diferentes operações logísticas em uma experiência integrada.</p>
+        <p class="open-q intro intro-3">Uma plataforma web para monitoramento de viagens e gestão de anomalias, complementada por um aplicativo mobile para apoiar a jornada dos motoristas.</p>
+      </div>
+      <dl class="meta intro intro-4">
+        <div><dt>Meu papel</dt><dd>UX/Product Designer</dd></div>
+        <div><dt>Atuação</dt><dd>Discovery, pesquisa, personas, arquitetura de informação, jornadas, prototipação e testes de usabilidade.</dd></div>
+        <div><dt>Time</dt><dd>Design, Produto e Engenharia, em colaboração com stakeholders do negócio.</dd></div>
+      </dl>
+      <div class="hero-slot intro intro-4">
+        <figure class="slot " data-slot="brf-hero">
+            <img class="slot-img" src="assets/images/brflog-capa.png" alt="Mockup do BRFLOG: notebook com a tela de Monitoramento da plataforma web, com a lista de viagens, etapas, temperatura e rastreamento, e smartphone em primeiro plano com o aplicativo do motorista mostrando status e a lista de entregas." loading="lazy">
+            
+            
+          </figure>
+      </div>
+    </header>
+
+    <!-- 01 O desafio -->
+    <section class="wrap sec" aria-labelledby="ch-title">
+      <hr class="sec-rule">
+      <div class="grid">
+        <div class="ch-head reveal">
+          <p class="eyebrow"><span class="n">01</span><span>O desafio</span></p>
+          <h2 id="ch-title" class="h2 ch-title" style="width: 1252px">Quatro operações. <span class="accent">Diferentes necessidades</span>. Um objetivo comum.</h2>
+        </div>
+        <div class="ch-a prose reveal">
+          <h3 class="ch-sub">Da produção&nbsp;<span style="font-size: clamp(22px, 2.1cqi, 30px); letter-spacing: -0.025em; text-wrap-mode: initial"></span><span style="font-size: clamp(22px, 2.1cqi, 30px); letter-spacing: -0.025em; text-wrap-mode: initial">à&nbsp;</span><span style="font-size: clamp(22px, 2.1cqi, 30px); letter-spacing: -0.025em; text-wrap-mode: initial">distribuição</span><span style="font-size: clamp(22px, 2.1cqi, 30px); letter-spacing: -0.025em; text-wrap-mode: initial">, diferentes contextos.</span><br></h3>
+          <p>O projeto contemplava quatro frentes: distribuição primária, distribuição secundária, agropecuária e commodities.</p>
+          <p>Cada uma tinha processos, etapas e necessidades de rastreamento próprios, que precisavam ser considerados na construção da solução.</p>
+        </div>
+        <div class="ch-b prose reveal">
+          <h3 class="ch-sub">Como reunir essas operações em uma única visão de monitoramento?</h3>
+          <p>O desafio era reunir o acompanhamento das viagens em uma única plataforma, permitindo visualizar etapas do transporte, tempos de percurso, temperatura, localização dos veículos e possíveis anomalias.</p>
+          <p>Além do monitoramento web, era necessário considerar a experiência mobile dos motoristas.</p>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- 02 Discovery -->
+    <section class="wrap sec" aria-labelledby="disc-title">
+      <hr class="sec-rule">
+      <div class="grid">
+        <div class="disc-head reveal">
+          <p class="eyebrow"><span class="n">02</span><span>Discovery</span></p>
+          <h2 id="disc-title" class="h2 is-wide">Antes de desenhar a solução, era preciso entender como a operação funcionava.</h2>
+        </div>
+        <div class="disc-text prose reveal">
+          <p class="lead">Conduzi o discovery para compreender as necessidades dos usuários, os processos existentes e as particularidades de cada frente logística.</p>
+          
+          <p>As necessidades variavam conforme o contexto. Quem acompanhava transferências entre unidades tinha demandas diferentes de quem monitorava entregas para clientes ou operações ligadas ao agronegócio.</p>
+          <p>O discovery ajudou a construir uma compreensão mais ampla da operação e a identificar quais informações precisavam estar disponíveis para apoiar o acompanhamento das viagens.</p>
+        </div>
+        <div class="disc-fig reveal">
+          <figure class="artifact" data-slot="brf-discovery">
+            <img class="artifact-img" src="assets/images/brflog-workshop-discovery.png" alt="Quadro do workshop de discovery com cinco atividades: Dark side e Bright side, com post-its organizados por importância e impacto; Metrificação, com indicadores por frente (Grãos, Agro, Primária, Distribuição e TI); Causa e efeito, com análise de causas raízes; e Sketches por frente logística." width="1536" height="1024" loading="lazy">
+            <figcaption class="artifact-cap"><strong>Workshop de discovery</strong><span>Mapeamento de desafios, métricas e processos das diferentes frentes logísticas.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Personas -->
+    <section class="wrap sec" aria-labelledby="per-title">
+      <hr class="sec-rule">
+      <div class="grid">
+        <div class="per-head reveal">
+          <p class="eyebrow"><span class="n">03</span><span>Mapeamento e definição de personas</span></p>
+          <h2 id="per-title" class="h2 is-wide">Entender quem utilizava o produto e quais decisões precisava tomar.</h2>
+        </div>
+        <div class="per-text prose reveal">
+          <p class="lead">Com diferentes áreas, responsabilidades e processos envolvidos, entender os usuários era essencial para orientar a concepção da solução.</p>
+          <p>O mapeamento e a definição de personas ajudaram a organizar os perfis envolvidos, suas responsabilidades e necessidades, identificando as informações relevantes para cada contexto de uso.</p>
+          <p class="per-aside note">Essa análise evidenciou a relação entre quem monitorava as viagens e quem estava em campo executando o transporte, duas perspectivas que precisavam ser consideradas na experiência do produto.</p>
+        </div>
+        <div class="per-fig reveal">
+          <figure class="artifact" data-slot="brf-personas">
+            
+            <img class="artifact-img" src="assets/images/brflog-personas.png" alt="Personas do projeto. Em destaque, Motorista e Ajudante de Entrega, com atividades, principais dores e problemas de usabilidade; atrás, as personas Assistente de Transportes e Assistente de Monitoramento Logístico." width="1672" height="941" loading="lazy">
+            <figcaption class="artifact-cap"><strong style="font-weight: 400">Personas</strong></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Arquitetura de informação e fluxos -->
+    <section class="wrap sec" aria-labelledby="ia-title">
+      <hr class="sec-rule">
+      <div class="grid">
+        <div class="ia-head reveal">
+          <p class="eyebrow"><span class="n">04</span><span>Arquitetura de informação e fluxos</span></p>
+          <h2 id="ia-title" class="h2 is-wide">Uma experiência integrada, com espaço para as particularidades de cada operação.</h2>
+        </div>
+        <div class="ia-lead prose reveal">
+          <p class="lead">A partir do entendimento dos usuários e dos processos, atuei na arquitetura da informação, nas jornadas e nos fluxos de navegação, em colaboração com o time multidisciplinar.</p>
+        </div>
+        <div class="ia-a prose reveal">
+          <p>Um dos desafios era organizar a complexidade do produto em uma estrutura compreensível, considerando áreas compartilhadas e funcionalidades e informações específicas de cada operação.</p>
+        </div>
+        <div class="ia-b prose reveal">
+          <p>A arquitetura precisava equilibrar esses dois níveis, permitindo que os usuários encontrassem as informações e funcionalidades relevantes para seu contexto de trabalho.</p>
+        </div>
+      </div>
+      
+      
+    </section>
+
+    <!-- Transição: as duas frentes da solução -->
+    <section class="fronts" aria-label="As duas frentes da solução">
+      <div class="wrap fronts-grid">
+        <div class="front reveal">
+          <span class="label">Plataforma web</span>
+          <h3>Monitoramento da operação</h3>
+          <p>Uma interface para consultar viagens, acompanhar seu andamento, visualizar informações do transporte e identificar e tratar anomalias.</p>
+        </div>
+        <div class="front reveal">
+          <span class="label">Aplicativo mobile</span>
+          <h3>Jornada do motorista</h3>
+          <p>Uma experiência para consultar informações da entrega e realizar as ações necessárias ao longo do transporte.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Design e prototipação -->
+    <section class="wrap sec" aria-labelledby="dp-title">
+      <div class="grid">
+        <div class="dp-head reveal">
+          <p class="eyebrow"><span class="n">05</span><span>Design e prototipação</span></p>
+          <h2 id="dp-title" class="h2 is-wide">Transformando a arquitetura em experiências concretas.</h2>
+        </div>
+        <div class="dp-intro prose reveal">
+          <p class="lead">A partir da arquitetura e dos fluxos definidos, foram desenvolvidas as interfaces web e mobile, considerando as necessidades de cada contexto de uso.</p>
+        </div>
+        <div class="dp-web prose reveal">
+          <p>Na plataforma web, a experiência permitia diferentes níveis de consulta: da visão geral das viagens ao detalhamento de cada transporte. O produto também contemplava um painel de anomalias, com acesso às informações de cada ocorrência e recursos para apoiar seu tratamento.&nbsp;</p>
+        </div>
+      </div>
+      <div class="dp-main reveal">
+        <figure class="slot" data-slot="brf-monitoramento">
+          <img class="slot-img" src="assets/images/brflog-plataforma-web.png" alt="Três telas da plataforma web do BRFLOG: Monitoramento, com a lista de viagens; detalhe da viagem, com dados do transporte, status e mapa da rota; e Painel de Anomalias, com ocorrências classificadas por prioridade." width="1672" height="941" loading="lazy">
+          <figcaption class="cap">Painel de monitoramento</figcaption>
+        </figure>
+      </div>
+      <div class="grid dp-pair">
+        
+        
+      </div>
+      <div class="grid dp-app">
+        <div class="prose reveal">
+          <p>No aplicativo, os fluxos consideravam o acesso à jornada e aos detalhes da entrega, incluindo informações como rota, mapa, status e dados do transporte.</p>
+        </div>
+        <figure class="slot reveal" data-slot="brf-aplicativo">
+          <img class="slot-img" src="assets/images/brflog-app-motorista.png" alt="Três telas do aplicativo do motorista: início com status e lista de entregas; detalhe da entrega com resumo e notas fiscais; e confirmação de devolução total enviada." width="1671" height="941" loading="lazy">
+          <figcaption class="cap">Aplicativo do motorista<br></figcaption>
+        </figure>
+      </div>
+      
+    </section>
+
+    <!-- 06 Testes de usabilidade -->
+    <section class="wrap sec" aria-labelledby="ut-title">
+      <hr class="sec-rule">
+      <div class="grid">
+        <div class="ut-text reveal">
+          <p class="eyebrow"><span class="n">06</span><span>Testes de usabilidade</span></p>
+          <h2 id="ut-title" class="h2">Validar a compreensão da interface e identificar oportunidades de melhoria.</h2>
+          <div class="prose">
+            <p class="lead">Conduzi testes de usabilidade para avaliar a experiência proposta e identificar dificuldades de uso.</p>
+            <p>Os testes revelaram oportunidades de melhoria na compreensão de informações e ações, incluindo a interpretação de prioridades no painel de anomalias.</p>
+            <p>Os testes permitiram confrontar as decisões de design com a forma como os usuários interpretavam e utilizavam a interface, identificando pontos que poderiam gerar dúvidas durante o trabalho.</p>
+          </div>
+        </div>
+        <div class="ut-fig reveal">
+          <figure class="slot" data-slot="brf-testes-usabilidade">
+            <img class="slot-img" src="assets/images/brflog-testes-maze.png" alt="Três telas do protótipo testadas no Maze com mapas de calor sobrepostos: Monitoramento, Painel de Anomalias e detalhe de uma viagem com a aba de anomalias, mostrando onde os participantes concentraram cliques." width="1122" height="1402" loading="lazy">
+            <figcaption class="cap">Testes de usabilidade no Maze</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Aprendizados -->
+    <section class="wrap sec" aria-labelledby="lr-title">
+      <hr class="sec-rule">
+      <div class="reveal">
+        <p class="eyebrow"><span class="n">07</span><span>Aprendizados</span></p>
+        <h2 id="lr-title" class="lr-title">Projetar para a complexidade exige entender o contexto antes de simplificá-lo<span class="accent">.</span></h2>
+      </div>
+      <div class="grid">
+        <div class="lr-lead prose reveal">
+          <p class="lead">O BRFLOG foi uma experiência que exigiu conectar diferentes processos, usuários e necessidades em uma solução coerente.</p>
+        </div>
+        <div class="lr-a prose reveal">
+          <p>O projeto reforçou a importância de compreender a operação antes de definir a arquitetura e as interfaces. Consistência não significa tratar todos os contextos da mesma maneira, mas encontrar padrões compartilhados sem perder as particularidades de cada operação.</p>
+        </div>
+        <div class="lr-b prose reveal">
+          <p>Ao final da minha atuação, o BRFLOG estava em fase piloto, com a solução em validação junto a um grupo inicial de usuários.</p>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Navegação entre cases -->
+    <section class="wrap endnav" aria-label="Navegação entre cases">
+      <nav class="close-nav reveal" aria-label="Navegação entre cases"><a class="home-link" href="index.html"><span class="arr" aria-hidden="true">←</span> Voltar ao início</a>
+        <a class="next" href="case-mais-capital.html">
+          <span class="eyebrow">Próximo case</span>
+          <span class="next-title"><span class="u">+Capital</span><span class="arr" aria-hidden="true">→</span></span>
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <footer id="contato" class="foot" aria-label="Contato">
+    <div class="wrap foot-in">
+      <span>© 2026 Evelyn Souza</span>
+      <div class="foot-links">
+        <a href="mailto:evelynsouzalves@gmail.com">E-mail <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/evelynsalves" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

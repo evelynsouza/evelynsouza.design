@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automatização da análise de NPS com IA — Evelyn Souza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/navegacao.css">
+<link rel="stylesheet" href="css/case-nps-com-ia.css">
+</head>
+<body>
+<div class="shell">
+<div class="site" id="topo">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="index.html"><span class="brand-name">Evelyn Souza</span><span class="brand-sep" aria-hidden="true"></span><span class="brand-role">UX Specialist &amp; Product Designer</span></a>
+      <div class="nav-wrap">
+        <nav class="nav" id="menu" aria-label="Principal">
+          <a href="index.html" aria-current="page" data-click="go-projects">Projetos</a>
+          <a href="sobre.html" data-click="close-menu">Sobre</a>
+          <a href="#contato" data-click="close-menu">Contato</a>
+        </nav>
+        <span class="nav-sep" aria-hidden="true"></span>
+        <button class="theme-btn" type="button" aria-label="Tema escuro" aria-pressed="false" data-click="toggle-theme">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"></path></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"></path></svg>
+        </button>
+        <button class="menu-btn" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false" data-click="toggle-menu"><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Capa -->
+    <header class="wrap" aria-labelledby="case-title">
+      <a class="back intro" href="index.html"><span class="arr" aria-hidden="true">←</span> Todos os projetos</a>
+      <div class="grid open">
+        <p class="eyebrow intro intro-2" style="grid-column: 1 / -1"><span class="n">Case 01</span><span>toro investimentos</span><span>automatização do nps</span></p>
+        <h1 id="case-title" class="open-title intro intro-2">NPS com IA</h1>
+        <p class="open-sub intro intro-3">Transformei um processo manual e recorrente de classificação de feedbacks em um fluxo apoiado por inteligência artificial, reduzindo o esforço operacional e ampliando as possibilidades de análise da voz do cliente.</p>
+      </div>
+      <div class="cover is-flow intro intro-4">
+        <img src="assets/images/nps-hero-fluxo.png" alt="Fluxo de análise de NPS: comentários de clientes entram no Google AI Studio, que classifica por grupo, categoria e sentimento; o Claude analisa padrões e gera insights; o NotebookLM consolida o conhecimento da voz do cliente. À direita, exemplos de classificação por Grupo, Categoria e Sentimento, com percentuais ilustrativos." width="1919" height="820">
+      </div>
+      <p class="cap intro intro-4">Representação do fluxo. Os comentários e percentuais exibidos são dados ilustrativos.</p>
+    </header>
+
+    <!-- 01 Contexto e problema -->
+    <section class="wrap sec" aria-labelledby="ctx-title">
+      <hr class="sec-rule">
+      <div class="grid">
+        <div class="prob-text reveal">
+          <p class="eyebrow"><span class="n">01</span><span>Contexto e problema</span></p>
+          <h2 id="ctx-title" class="h2">Muito tempo classificando. Pouco tempo analisando.</h2>
+          <p class="lede">Toda semana, os comentários de NPS eram lidos e classificados manualmente antes de qualquer análise começar.</p>
+          <span class="label">Classificação manual</span>
+          <ol class="numlist">
+            <li><span class="idx">01</span><span>Leitura e classificação 100% manuais.</span></li>
+            <li><span class="idx">02</span><span>Processo semanal e repetitivo.</span></li>
+            <li><span class="idx">03</span><span>Dificuldade em manter a rotina atualizada.</span></li>
+          </ol>
+        </div>
+        <div class="prob-nums reveal">
+          <div class="num"><b>~380</b><span>comentários por semana</span></div>
+          <div class="num"><b>~4h</b><span>por semana na classificação</span></div>
+        </div>
+      </div>
+      <figure class="shot wide-shot reveal">
+        <img src="assets/images/nps-planilha-manual.jpg" alt="Planilha com comentários de NPS classificados manualmente nas colunas Grupo e Categoria. Os comentários dos clientes aparecem desfocados." loading="lazy">
+        <figcaption class="cap">Exemplo dos comentários classificados manualmente.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 02 Solução e experimentação -->
+    <section class="wrap sec" aria-labelledby="sol-title">
+      <hr class="sec-rule">
+      <div class="grid">
+        <div class="sol-head reveal">
+          <p class="eyebrow"><span class="n">02</span><span>Solução e experimentação</span></p>
+          <h2 id="sol-title" class="h2">Da classificação manual a um fluxo com IA.</h2>
+          <p class="lede">A proposta foi automatizar a classificação do NPS usando o Google AI Studio, com entrada via arquivo CSV. A IA lê, interpreta e classifica os comentários em:</p>
+          <ul class="classes" aria-label="Classificações">
+            <li>Grupo</li>
+            <li>Categoria</li>
+            <li>Sentimento</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid prompt">
+        <figure class="shot prompt-shot panel reveal">
+          <img src="assets/images/nps-prompt-estruturado.jpg" alt="Trecho do prompt estruturado, com as seções Contexto e Objetivo. O texto aparece desfocado." loading="lazy">
+        </figure>
+        <div class="prompt-text reveal">
+          <span class="label">O prompt</span>
+          <h3 class="h3">A IA precisa ser treinada, o prompt é esse treinamento.</h3>
+          <dl class="deflist">
+            <div><dt>Contexto</dt><dd>Quem é a IA, o que é o produto, qual o objetivo do projeto.</dd></div>
+            <div><dt>Objetivo</dt><dd>O que exatamente a IA deve classificar e como devolver o resultado.</dd></div>
+            <div><dt>Regras</dt><dd>Limites, restrições e como tratar casos ambíguos.</dd></div>
+            <div><dt>Exemplos</dt><dd>Amostras reais de classificação correta para calibrar a resposta.</dd></div>
+          </dl>
+          <p class="note">Mais contexto = melhores resultados.</p>
+        </div>
+      </div>
+
+      <div class="grid iter">
+        <div class="iter-text reveal">
+          <span class="label">Processo de refinamento</span>
+          <h3 class="h3">Iterações</h3>
+          <p class="lede">Os primeiros resultados não eram consistentes. O prompt passou por testes e ajustes até a classificação se tornar coerente.</p>
+        </div>
+        <div class="iter-shots panel reveal">
+          <figure>
+            <img src="assets/images/nps-primeiro-prompt.jpg" alt="Primeiro prompt enviado, pedindo ajuda para classificar uma planilha de NPS em Grupos e Categorias, seguido da lista de grupos. O texto aparece desfocado." loading="lazy">
+            <figcaption class="cap">Primeiro prompt enviado.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/nps-resultados-aleatorios.jpg" alt="Planilha devolvida nas primeiras tentativas, com colunas preenchidas de forma aleatória. O conteúdo aparece desfocado." loading="lazy">
+            <figcaption class="cap">Resultados com preenchimentos aleatórios.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Evolução -->
+    <section class="wrap sec" aria-labelledby="evo-title">
+      <hr class="sec-rule">
+      <div class="grid">
+        <div class="evo-head reveal">
+          <p class="eyebrow"><span class="n">03</span><span>Evolução</span></p>
+          <h2 id="evo-title" class="h2">Classificar era só o começo.</h2>
+          <p class="lede">Com a classificação automatizada, o fluxo ganhou novas etapas: cada ferramenta assumiu um papel, da organização dos comentários ao acesso aos dados.</p>
+        </div>
+      </div>
+      <ol class="flow">
+        <li class="reveal">
+          <span class="label">01 · Classificação</span>
+          <h3>Google AI Studio</h3>
+          <p>Classifica os comentários por grupo, categoria e sentimento.</p>
+        </li>
+        <li class="reveal">
+          <span class="label">02 · Análise</span>
+          <h3>Claude</h3>
+          <p>Aprofunda a análise: identifica padrões e tendências, reúne os principais insights e sugere ações por categoria.</p>
+        </li>
+        <li class="reveal">
+          <span class="label">03 · Acesso aos dados</span>
+          <h3>NotebookLM</h3>
+          <p>Consolida os relatórios em uma base de conhecimento interativa, onde designers, PMs e stakeholders fazem perguntas e obtêm respostas baseadas na voz real dos usuários.</p>
+        </li>
+      </ol>
+      <p class="note evo-note reveal">O prompt da análise é refinado de acordo com a análise a ser feita: quanto mais contexto do produto e do objetivo da análise, melhores os insights e acionáveis.</p>
+
+      <div class="safe reveal">
+        <div class="safe-text">
+          <span class="label">Segurança dos dados</span>
+          <h3>As informações sensíveis são removidas antes do envio dos arquivos às ferramentas de IA.</h3>
+          <p>Esse processo é aplicado tanto para o Google AI Studio quanto para o Claude.</p>
+        </div>
+        <ol class="safe-steps">
+          <li><span class="idx">01</span><b>Dados brutos</b><span class="d">Arquivo original com todos os campos.</span></li>
+          <li><span class="idx">02</span><b>Remoção de dados sensíveis</b><span class="d">Qualquer dado que possa identificar o cliente.</span></li>
+          <li><span class="idx">03</span><b>Arquivo limpo</b><span class="d">Apenas nota, classificação e comentário permanecem.</span></li>
+          <li><span class="idx">04</span><b>Upload para IA</b><span class="d">Sem dado pessoal.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 04 Resultados -->
+    <section class="res-band" aria-labelledby="res-title">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="eyebrow"><span class="n">04</span><span>Resultados</span></p>
+          <h2 id="res-title" class="h2">Menos esforço operacional. Mais espaço para gerar insights.</h2>
+        </div>
+        <div class="ba reveal">
+          <p class="ba-item ba-before"><b>~4h</b><span>Antes, por semana</span></p>
+          <span class="ba-arrow" aria-hidden="true">→</span>
+          <p class="ba-item ba-after"><b>~5–10 min</b><span>Com IA, por semana</span></p>
+        </div>
+        <div class="res-text reveal">
+          <p class="lead">A classificação passou a ser automática, com redução significativa do esforço manual.</p>
+          <p>Com menos tempo dedicado a classificar, abre-se espaço para aprofundar a análise da voz do cliente e apoiar decisões de produto com mais contexto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navegação entre cases -->
+    <section class="wrap endnav" aria-label="Navegação entre cases">
+      <nav class="close-nav reveal" aria-label="Navegação entre cases">
+        <a class="home-link" href="index.html"><span class="arr" aria-hidden="true">←</span> Voltar ao início</a>
+        <a class="next" href="case-bolsa.html">
+          <span class="eyebrow">Próximo case</span>
+          <span class="next-title"><span class="u">Evolução da experiência de Bolsa</span><span class="arr" aria-hidden="true">→</span></span>
+        </a>
+      </nav>
+    </section>
+  </main>
+
+  <footer id="contato" class="foot" aria-label="Contato">
+    <div class="wrap foot-in">
+      <span>© 2026 Evelyn Souza</span>
+      <div class="foot-links">
+        <a href="mailto:evelynsouzalves@gmail.com">E-mail <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/evelynsalves" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
