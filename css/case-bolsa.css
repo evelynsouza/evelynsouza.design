@@ -157,8 +157,7 @@ body{margin:0}
 .sol-text > .lede{margin-top:24px}
 .sol-text .numlist{margin-top:clamp(32px,3.6cqi,48px)}
 .sol-shot{grid-column:6/-1;align-self:center;border-radius:6px;background:#EEEAE1;overflow:hidden}
-.sol-shot .sol-scroll{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
-.sol-shot img{display:block;width:100%;height:auto;object-fit:contain;border-radius:0}
+.sol-shot img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:0}
 
 /* ---------- 07 Validação ---------- */
 .val-text{grid-column:1/span 6}
@@ -222,6 +221,11 @@ body{margin:0}
   .site *,.site *::before,.site *::after{animation:none!important;transition-duration:.01ms!important}
 }
 
+/* ---------- Solução: imagem abaixo do texto ---------- */
+@container site (max-width:1100px){
+  .sol-text,.sol-shot{grid-column:1/-1}
+  .sol-shot{margin-top:clamp(40px,5cqi,56px)}
+}
 /* ---------- Tablet ---------- */
 @container site (max-width:960px){
   .open-sub{grid-column:1/-1}
@@ -232,7 +236,6 @@ body{margin:0}
 }
 /* ---------- Mobile ---------- */
 @container site (max-width:600px){
-  .sol-shot img{width:max(100%,840px);max-width:none}
   .site{font-size:16px;--gap:16px}
   .topbar-in{height:64px;gap:8px}
   .brand{font-size:15px;white-space:nowrap;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px}
