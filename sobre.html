@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) — o script do Google é carregado depois da página, para não disputar rede com o conteúdo; os comandos abaixo ficam na fila (dataLayer) até lá -->
+<script>
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DX0S1H62YM';
+    document.head.appendChild(s);
+  });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // Sem Google Signals nem personalização de anúncios: só métricas de uso do site
+  gtag('config', 'G-DX0S1H62YM', { allow_google_signals: false, allow_ad_personalization_signals: false });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sobre Evelyn Souza — UX Specialist &amp; Product Designer</title>
@@ -37,11 +51,9 @@
   }
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/navegacao.css?v=20261018">
-<link rel="stylesheet" href="css/sobre.css?v=20261018">
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/navegacao.css?v=20261019">
+<link rel="stylesheet" href="css/sobre.css?v=20261019">
 </head>
 <body>
 <div class="shell">
@@ -79,7 +91,7 @@
         <a class="link-line intro intro-4" href="https://www.linkedin.com/in/evelynsalves" target="_blank" rel="noopener noreferrer">Ver perfil no LinkedIn <span class="arr" aria-hidden="true">↗</span></a>
       </div>
       <figure class="photo intro intro-3">
-        <img class="photo-img" src="assets/images/sobre-retrato.jpg" alt="Retrato de Evelyn Souza sorrindo, com cabelo longo escuro, blusa branca e casaco preto, sobre fundo claro." width="918" height="1377">
+        <picture><source type="image/webp" srcset="assets/images/webp/sobre-retrato-480.webp 480w, assets/images/webp/sobre-retrato-800.webp 800w, assets/images/webp/sobre-retrato-918.webp 918w" sizes="(max-width: 600px) 300px, (max-width: 1440px) 27vw, 380px"><img class="photo-img" src="assets/images/sobre-retrato.jpg" alt="Retrato de Evelyn Souza sorrindo, com cabelo longo escuro, blusa branca e casaco preto, sobre fundo claro." width="918" height="1377" fetchpriority="high"></picture>
       </figure>
     </section>
 
@@ -109,17 +121,17 @@
       </div>
       <ul class="life">
         <li class="reveal">
-          <div class="life-tile is-photo"><img src="assets/images/sobre-nova-york.jpg" alt="Evelyn no observatório Top of the Rock, em Nova York, com o skyline da cidade e o Empire State Building ao fundo." width="1152" height="1536" loading="lazy" style="object-position: 50% 60%"></div>
+          <div class="life-tile is-photo"><picture><source type="image/webp" srcset="assets/images/webp/sobre-nova-york-480.webp 480w, assets/images/webp/sobre-nova-york-800.webp 800w, assets/images/webp/sobre-nova-york-1152.webp 1152w" sizes="(max-width: 600px) 86vw, (max-width: 960px) 43vw, (max-width: 1440px) 29vw, 420px"><img src="assets/images/sobre-nova-york.jpg" alt="Evelyn no observatório Top of the Rock, em Nova York, com o skyline da cidade e o Empire State Building ao fundo." width="1152" height="1536" loading="lazy" style="object-position: 50% 60%"></picture></div>
           <h3>Por aí, sempre que possível</h3>
           <p class="ph">Gosto de conhecer lugares novos, descobrir culturas e voltar para casa com novas histórias e lembranças.</p>
         </li>
         <li class="reveal">
-          <div class="life-tile is-photo"><img src="assets/images/sobre-familia.jpg" alt="Selfie de Evelyn com Diego e a cachorrinha Mel, ao ar livre, em um dia de céu azul." width="1152" height="1536" loading="lazy" style="object-position: 50% 25%"></div>
+          <div class="life-tile is-photo"><picture><source type="image/webp" srcset="assets/images/webp/sobre-familia-480.webp 480w, assets/images/webp/sobre-familia-800.webp 800w, assets/images/webp/sobre-familia-1152.webp 1152w" sizes="(max-width: 600px) 86vw, (max-width: 960px) 43vw, (max-width: 1440px) 29vw, 420px"><img src="assets/images/sobre-familia.jpg" alt="Selfie de Evelyn com Diego e a cachorrinha Mel, ao ar livre, em um dia de céu azul." width="1152" height="1536" loading="lazy" style="object-position: 50% 25%"></picture></div>
           <h3>As melhores partes da rotina</h3>
           <p class="ph">Tempo com quem amo, boas lembranças em família e muito carinho de quatro patas.</p>
         </li>
         <li class="reveal">
-          <div class="life-tile is-photo"><img src="assets/images/sobre-pilates.jpg" alt="Evelyn praticando Pilates no aparelho cadillac, de cabeça para baixo, com uma perna estendida para cima." width="1152" height="1536" loading="lazy" style="object-position: 50% 45%"></div>
+          <div class="life-tile is-photo"><picture><source type="image/webp" srcset="assets/images/webp/sobre-pilates-480.webp 480w, assets/images/webp/sobre-pilates-800.webp 800w, assets/images/webp/sobre-pilates-1152.webp 1152w" sizes="(max-width: 600px) 86vw, (max-width: 960px) 43vw, (max-width: 1440px) 29vw, 420px"><img src="assets/images/sobre-pilates.jpg" alt="Evelyn praticando Pilates no aparelho cadillac, de cabeça para baixo, com uma perna estendida para cima." width="1152" height="1536" loading="lazy" style="object-position: 50% 45%"></picture></div>
           <h3>Um tempo para mim</h3>
           <p class="ph">Gosto de me movimentar, cuidar de mim e encontrar momentos para desacelerar em meio à rotina.</p>
         </li>
@@ -147,6 +159,6 @@
   </footer>
 </div>
 </div>
-<script src="js/main.js?v=20261018"></script>
+<script src="js/main.js?v=20261019"></script>
 </body>
 </html>

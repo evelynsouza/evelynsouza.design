@@ -27,7 +27,9 @@ Para testar localmente: `python3 -m http.server` dentro da pasta e abra `http://
 
 ## Observações
 
-- A fonte Manrope é carregada do Google Fonts.
+- A fonte Manrope fica no próprio site (`assets/fonts/`, recortes `latin` e `latin-ext` do Google Fonts, licença SIL OFL), declarada em `css/navegacao.css`.
+- As imagens têm versões WebP em várias larguras em `assets/images/webp/`, entregues com `<picture>`/`srcset`; os arquivos originais continuam em `assets/images/` e servem de alternativa. Ao trocar uma imagem, gere de novo as versões WebP com o mesmo nome base (`nome-LARGURA.webp`).
+- Google Analytics 4 (`G-DX0S1H62YM`) no início do `<head>` de cada página. O script do Google só é baixado depois do evento `load` (para não pesar no carregamento); Google Signals e personalização de anúncios estão desativados. Página nova precisa receber o mesmo bloco.
 - A preferência de tema fica salva no navegador (`localStorage`, chave `es-theme`).
 - O e-mail copiado pelo botão de contato é o texto exibido no próprio botão (`.contact-value`).
-- Os links de CSS e JS levam uma versão (`?v=20261018`) para os navegadores não usarem arquivos antigos do cache. Ao publicar mudanças em `css/` ou `js/`, troque esse número em todas as páginas (por exemplo, pela data do dia).
+- Os links de CSS e JS levam uma versão (`?v=20261019`) para os navegadores não usarem arquivos antigos do cache. Ao publicar mudanças em `css/` ou `js/`, troque esse número em todas as páginas (por exemplo, pela data do dia).

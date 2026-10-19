@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) — o script do Google é carregado depois da página, para não disputar rede com o conteúdo; os comandos abaixo ficam na fila (dataLayer) até lá -->
+<script>
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DX0S1H62YM';
+    document.head.appendChild(s);
+  });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // Sem Google Signals nem personalização de anúncios: só métricas de uso do site
+  gtag('config', 'G-DX0S1H62YM', { allow_google_signals: false, allow_ad_personalization_signals: false });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Evelyn Souza — UX Specialist &amp; Product Designer</title>
@@ -43,11 +57,9 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/navegacao.css?v=20261018">
-<link rel="stylesheet" href="css/index.css?v=20261018">
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/navegacao.css?v=20261019">
+<link rel="stylesheet" href="css/index.css?v=20261019">
 </head>
 <body>
 <div class="shell">
@@ -98,7 +110,7 @@
             <a class="proj-link" href="case-nps-com-ia">
               <div class="media">
                 
-                  <img class="fit-contain-light" src="assets/images/nps-hero-fluxo.png" width="1919" height="820" alt="Fluxo de análise de NPS: comentários de clientes entram no Google AI Studio, que classifica por grupo, categoria e sentimento; o Claude analisa padrões e gera insights; o NotebookLM consolida o conhecimento da voz do cliente." loading="lazy">
+                  <picture><source type="image/webp" srcset="assets/images/webp/nps-hero-fluxo-480.webp 480w, assets/images/webp/nps-hero-fluxo-800.webp 800w, assets/images/webp/nps-hero-fluxo-1200.webp 1200w, assets/images/webp/nps-hero-fluxo-1600.webp 1600w, assets/images/webp/nps-hero-fluxo-1919.webp 1919w" sizes="(max-width: 600px) 92vw, (max-width: 1440px) 39vw, 560px"><img class="fit-contain-light" src="assets/images/nps-hero-fluxo.png" width="1919" height="820" alt="Fluxo de análise de NPS: comentários de clientes entram no Google AI Studio, que classifica por grupo, categoria e sentimento; o Claude analisa padrões e gera insights; o NotebookLM consolida o conhecimento da voz do cliente."></picture>
                 
                 
               </div>
@@ -116,7 +128,7 @@
             <a class="proj-link" href="case-bolsa">
               <div class="media">
                 
-                  <img class="" src="assets/images/bolsa-capa.png" width="1600" height="900" alt="Três telas da nova área de Bolsa no aplicativo: busca com coleções de ativos, Home da Bolsa com Ibovespa e Dólar, Destaques e Oportunidades da Bolsa, e lista dos mais negociados na Toro." loading="lazy">
+                  <picture><source type="image/webp" srcset="assets/images/webp/bolsa-capa-480.webp 480w, assets/images/webp/bolsa-capa-800.webp 800w, assets/images/webp/bolsa-capa-1200.webp 1200w, assets/images/webp/bolsa-capa-1600.webp 1600w" sizes="(max-width: 600px) 92vw, (max-width: 1440px) 39vw, 560px"><img class="" src="assets/images/bolsa-capa.png" width="1600" height="900" alt="Três telas da nova área de Bolsa no aplicativo: busca com coleções de ativos, Home da Bolsa com Ibovespa e Dólar, Destaques e Oportunidades da Bolsa, e lista dos mais negociados na Toro." loading="lazy"></picture>
                 
                 
               </div>
@@ -134,7 +146,7 @@
             <a class="proj-link" href="case-brflog">
               <div class="media">
                 
-                  <img class="" src="assets/images/brflog-capa.png" width="1672" height="941" alt="Mockup do BRFLOG: notebook com a tela de Monitoramento da plataforma web e smartphone em primeiro plano com o aplicativo do motorista." loading="lazy">
+                  <picture><source type="image/webp" srcset="assets/images/webp/brflog-capa-480.webp 480w, assets/images/webp/brflog-capa-800.webp 800w, assets/images/webp/brflog-capa-1200.webp 1200w, assets/images/webp/brflog-capa-1672.webp 1672w" sizes="(max-width: 600px) 92vw, (max-width: 1440px) 39vw, 560px"><img class="" src="assets/images/brflog-capa.png" width="1672" height="941" alt="Mockup do BRFLOG: notebook com a tela de Monitoramento da plataforma web e smartphone em primeiro plano com o aplicativo do motorista." loading="lazy"></picture>
                 
                 
               </div>
@@ -152,7 +164,7 @@
             <a class="proj-link" href="case-mais-capital">
               <div class="media">
                 
-                  <img class="" src="assets/images/capital-capa.png" width="1672" height="941" alt="Três celulares com telas do aplicativo +Capital: simulação de financiamento com escolha do veículo, tela inicial de Análises de Crédito e resumo do financiamento com parcelas e detalhamento da simulação." loading="lazy">
+                  <picture><source type="image/webp" srcset="assets/images/webp/capital-capa-480.webp 480w, assets/images/webp/capital-capa-800.webp 800w, assets/images/webp/capital-capa-1200.webp 1200w, assets/images/webp/capital-capa-1672.webp 1672w" sizes="(max-width: 600px) 92vw, (max-width: 1440px) 39vw, 560px"><img class="" src="assets/images/capital-capa.png" width="1672" height="941" alt="Três celulares com telas do aplicativo +Capital: simulação de financiamento com escolha do veículo, tela inicial de Análises de Crédito e resumo do financiamento com parcelas e detalhamento da simulação." loading="lazy"></picture>
                 
                 
               </div>
@@ -216,6 +228,6 @@
   </footer>
 </div>
 </div>
-<script src="js/main.js?v=20261018"></script>
+<script src="js/main.js?v=20261019"></script>
 </body>
 </html>

@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) — o script do Google é carregado depois da página, para não disputar rede com o conteúdo; os comandos abaixo ficam na fila (dataLayer) até lá -->
+<script>
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DX0S1H62YM';
+    document.head.appendChild(s);
+  });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // Sem Google Signals nem personalização de anúncios: só métricas de uso do site
+  gtag('config', 'G-DX0S1H62YM', { allow_google_signals: false, allow_ad_personalization_signals: false });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Evolução da experiência de Bolsa — Evelyn Souza</title>
@@ -32,11 +46,9 @@
   "isPartOf": { "@id": "https://evelynsouza.design/#website" }
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/navegacao.css?v=20261018">
-<link rel="stylesheet" href="css/case-bolsa.css?v=20261018">
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/navegacao.css?v=20261019">
+<link rel="stylesheet" href="css/case-bolsa.css?v=20261019">
 </head>
 <body>
 <div class="shell">
@@ -73,7 +85,7 @@
         
       </div>
       <div class="cover is-comp intro intro-4">
-        <img src="assets/images/bolsa-capa.png" alt="Três telas da nova área de Bolsa no aplicativo: busca com coleções de ativos, Home da Bolsa com Ibovespa e Dólar, Destaques e Oportunidades da Bolsa, e lista dos mais negociados na Toro." width="1600" height="900">
+        <picture><source type="image/webp" srcset="assets/images/webp/bolsa-capa-480.webp 480w, assets/images/webp/bolsa-capa-800.webp 800w, assets/images/webp/bolsa-capa-1200.webp 1200w, assets/images/webp/bolsa-capa-1600.webp 1600w" sizes="(max-width: 1440px) 96vw, 1320px"><img src="assets/images/bolsa-capa.png" alt="Três telas da nova área de Bolsa no aplicativo: busca com coleções de ativos, Home da Bolsa com Ibovespa e Dólar, Destaques e Oportunidades da Bolsa, e lista dos mais negociados na Toro." width="1600" height="900" fetchpriority="high"></picture>
       </div>
     </header>
 
@@ -157,7 +169,7 @@
           </div>
         </div>
         <figure class="shot ana-shot reveal">
-          <img src="assets/images/bolsa-heatmap-scroll.jpg" width="1651" height="1610" alt="Dois heatmaps de scroll da página anterior: a atenção se concentra no topo e cai nas faixas abaixo da dobra média, onde ficavam a busca e a lista de ativos." loading="lazy">
+          <picture><source type="image/webp" srcset="assets/images/webp/bolsa-heatmap-scroll-480.webp 480w, assets/images/webp/bolsa-heatmap-scroll-800.webp 800w, assets/images/webp/bolsa-heatmap-scroll-1200.webp 1200w, assets/images/webp/bolsa-heatmap-scroll-1651.webp 1651w" sizes="(max-width: 960px) 90vw, (max-width: 1440px) 45vw, 640px"><img src="assets/images/bolsa-heatmap-scroll.jpg" width="1651" height="1610" alt="Dois heatmaps de scroll da página anterior: a atenção se concentra no topo e cai nas faixas abaixo da dobra média, onde ficavam a busca e a lista de ativos." loading="lazy"></picture>
         </figure>
       </div>
     </section>
@@ -209,7 +221,7 @@
           </ol>
         </div>
         <figure class="shot sol-shot reveal">
-          <img src="assets/images/bolsa-solucao-telas.png" width="1536" height="1024" alt="Três telas da solução lado a lado. Home da Bolsa: busca por ativo, Ibovespa e Dólar, Destaques, Oportunidades da Bolsa e Ativos populares. Página de busca: coleções de ativos com teclado aberto. Coleção Gigantes da tecnologia: lista de BDRs e outras coleções." loading="lazy">
+          <picture><source type="image/webp" srcset="assets/images/webp/bolsa-solucao-telas-480.webp 480w, assets/images/webp/bolsa-solucao-telas-800.webp 800w, assets/images/webp/bolsa-solucao-telas-1200.webp 1200w, assets/images/webp/bolsa-solucao-telas-1536.webp 1536w" sizes="(max-width: 1100px) 90vw, 760px"><img src="assets/images/bolsa-solucao-telas.png" width="1536" height="1024" alt="Três telas da solução lado a lado. Home da Bolsa: busca por ativo, Ibovespa e Dólar, Destaques, Oportunidades da Bolsa e Ativos populares. Página de busca: coleções de ativos com teclado aberto. Coleção Gigantes da tecnologia: lista de BDRs e outras coleções." loading="lazy"></picture>
         </figure>
       </div>
     </section>
@@ -231,7 +243,7 @@
           <p class="note">Os testes trouxeram evidências qualitativas de que a nova organização respondia aos problemas observados na investigação.</p>
         </div>
         <figure class="shot val-shot reveal">
-          <img src="assets/images/bolsa-heatmap-nova-versao.jpg" width="845" height="1610" alt="Heatmap da nova versão da página, com a atenção concentrada na busca, nos Destaques e nas Oportunidades da Bolsa." loading="lazy">
+          <picture><source type="image/webp" srcset="assets/images/webp/bolsa-heatmap-nova-versao-480.webp 480w, assets/images/webp/bolsa-heatmap-nova-versao-845.webp 845w" sizes="(max-width: 600px) 86vw, (max-width: 960px) 43vw, 420px"><img src="assets/images/bolsa-heatmap-nova-versao.jpg" width="845" height="1610" alt="Heatmap da nova versão da página, com a atenção concentrada na busca, nos Destaques e nas Oportunidades da Bolsa." loading="lazy"></picture>
         </figure>
       </div>
     </section>
@@ -288,6 +300,6 @@
   </footer>
 </div>
 </div>
-<script src="js/main.js?v=20261018"></script>
+<script src="js/main.js?v=20261019"></script>
 </body>
 </html>

@@ -110,7 +110,7 @@ body{margin:0}
 /* Mockup real: imagem inteira dentro do bloco, sem corte; fundo igual às bordas da imagem */
 .stage.has-hero{background:#0e0e0e;aspect-ratio:1672/941}
 .stage.has-hero.is-photo{background:none}
-.stage.has-hero > img{object-fit:contain}
+.stage.has-hero > img,.stage.has-hero > picture > img{object-fit:contain}
 .device{width:clamp(72px,13cqi,208px);aspect-ratio:9/19.5;border-radius:clamp(12px,1.8cqi,30px);border:1px solid rgba(244,241,234,.2);background:rgba(244,241,234,.025)}
 .device.mid{width:clamp(84px,15cqi,240px);transform:translateY(-5%);border-color:rgba(244,241,234,.32)}
 /* Telas reais: cada print ocupa a largura do aparelho, sem distorção; prints mais longos que a tela rolam dentro dele */

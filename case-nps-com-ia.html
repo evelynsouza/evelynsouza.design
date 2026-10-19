@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) — o script do Google é carregado depois da página, para não disputar rede com o conteúdo; os comandos abaixo ficam na fila (dataLayer) até lá -->
+<script>
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DX0S1H62YM';
+    document.head.appendChild(s);
+  });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // Sem Google Signals nem personalização de anúncios: só métricas de uso do site
+  gtag('config', 'G-DX0S1H62YM', { allow_google_signals: false, allow_ad_personalization_signals: false });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Automatização da análise de NPS com IA — Evelyn Souza</title>
@@ -32,11 +46,9 @@
   "isPartOf": { "@id": "https://evelynsouza.design/#website" }
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/navegacao.css?v=20261018">
-<link rel="stylesheet" href="css/case-nps-com-ia.css?v=20261018">
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/navegacao.css?v=20261019">
+<link rel="stylesheet" href="css/case-nps-com-ia.css?v=20261019">
 </head>
 <body>
 <div class="shell">
@@ -72,7 +84,7 @@
         <p class="open-sub intro intro-3">Transformei um processo manual e recorrente de classificação de feedbacks em um fluxo apoiado por inteligência artificial, reduzindo o esforço operacional e ampliando as possibilidades de análise da voz do cliente.</p>
       </div>
       <div class="cover is-flow intro intro-4">
-        <img src="assets/images/nps-hero-fluxo.png" alt="Fluxo de análise de NPS: comentários de clientes entram no Google AI Studio, que classifica por grupo, categoria e sentimento; o Claude analisa padrões e gera insights; o NotebookLM consolida o conhecimento da voz do cliente. À direita, exemplos de classificação por Grupo, Categoria e Sentimento, com percentuais ilustrativos." width="1919" height="820">
+        <picture><source type="image/webp" srcset="assets/images/webp/nps-hero-fluxo-480.webp 480w, assets/images/webp/nps-hero-fluxo-800.webp 800w, assets/images/webp/nps-hero-fluxo-1200.webp 1200w, assets/images/webp/nps-hero-fluxo-1600.webp 1600w, assets/images/webp/nps-hero-fluxo-1919.webp 1919w" sizes="(max-width: 1440px) 96vw, 1320px"><img src="assets/images/nps-hero-fluxo.png" alt="Fluxo de análise de NPS: comentários de clientes entram no Google AI Studio, que classifica por grupo, categoria e sentimento; o Claude analisa padrões e gera insights; o NotebookLM consolida o conhecimento da voz do cliente. À direita, exemplos de classificação por Grupo, Categoria e Sentimento, com percentuais ilustrativos." width="1919" height="820" fetchpriority="high"></picture>
       </div>
       <p class="cap intro intro-4">Representação do fluxo. Os comentários e percentuais exibidos são dados ilustrativos.</p>
     </header>
@@ -98,7 +110,7 @@
         </div>
       </div>
       <figure class="shot wide-shot reveal">
-        <img src="assets/images/nps-planilha-manual.jpg" width="1373" height="744" alt="Planilha com comentários de NPS classificados manualmente nas colunas Grupo e Categoria. Os comentários dos clientes aparecem desfocados." loading="lazy">
+        <picture><source type="image/webp" srcset="assets/images/webp/nps-planilha-manual-480.webp 480w, assets/images/webp/nps-planilha-manual-800.webp 800w, assets/images/webp/nps-planilha-manual-1200.webp 1200w, assets/images/webp/nps-planilha-manual-1373.webp 1373w" sizes="(max-width: 1440px) 96vw, 1320px"><img src="assets/images/nps-planilha-manual.jpg" width="1373" height="744" alt="Planilha com comentários de NPS classificados manualmente nas colunas Grupo e Categoria. Os comentários dos clientes aparecem desfocados." loading="lazy"></picture>
         <figcaption class="cap">Exemplo dos comentários classificados manualmente.</figcaption>
       </figure>
     </section>
@@ -121,7 +133,7 @@
 
       <div class="grid prompt">
         <figure class="shot prompt-shot panel reveal">
-          <img src="assets/images/nps-prompt-estruturado.jpg" width="1162" height="920" alt="Trecho do prompt estruturado, com as seções Contexto e Objetivo. O texto aparece desfocado." loading="lazy">
+          <picture><source type="image/webp" srcset="assets/images/webp/nps-prompt-estruturado-480.webp 480w, assets/images/webp/nps-prompt-estruturado-800.webp 800w, assets/images/webp/nps-prompt-estruturado-1162.webp 1162w" sizes="(max-width: 960px) 86vw, (max-width: 1440px) 32vw, 460px"><img src="assets/images/nps-prompt-estruturado.jpg" width="1162" height="920" alt="Trecho do prompt estruturado, com as seções Contexto e Objetivo. O texto aparece desfocado." loading="lazy"></picture>
         </figure>
         <div class="prompt-text reveal">
           <span class="label">O prompt</span>
@@ -144,11 +156,11 @@
         </div>
         <div class="iter-shots panel reveal">
           <figure>
-            <img src="assets/images/nps-primeiro-prompt.jpg" width="1159" height="1263" alt="Primeiro prompt enviado, pedindo ajuda para classificar uma planilha de NPS em Grupos e Categorias, seguido da lista de grupos. O texto aparece desfocado." loading="lazy">
+            <picture><source type="image/webp" srcset="assets/images/webp/nps-primeiro-prompt-480.webp 480w, assets/images/webp/nps-primeiro-prompt-800.webp 800w, assets/images/webp/nps-primeiro-prompt-1159.webp 1159w" sizes="(max-width: 600px) 80vw, (max-width: 960px) 42vw, 330px"><img src="assets/images/nps-primeiro-prompt.jpg" width="1159" height="1263" alt="Primeiro prompt enviado, pedindo ajuda para classificar uma planilha de NPS em Grupos e Categorias, seguido da lista de grupos. O texto aparece desfocado." loading="lazy"></picture>
             <figcaption class="cap">Primeiro prompt enviado.</figcaption>
           </figure>
           <figure>
-            <img src="assets/images/nps-resultados-aleatorios.jpg" width="1188" height="1309" alt="Planilha devolvida nas primeiras tentativas, com colunas preenchidas de forma aleatória. O conteúdo aparece desfocado." loading="lazy">
+            <picture><source type="image/webp" srcset="assets/images/webp/nps-resultados-aleatorios-480.webp 480w, assets/images/webp/nps-resultados-aleatorios-800.webp 800w, assets/images/webp/nps-resultados-aleatorios-1188.webp 1188w" sizes="(max-width: 600px) 80vw, (max-width: 960px) 42vw, 330px"><img src="assets/images/nps-resultados-aleatorios.jpg" width="1188" height="1309" alt="Planilha devolvida nas primeiras tentativas, com colunas preenchidas de forma aleatória. O conteúdo aparece desfocado." loading="lazy"></picture>
             <figcaption class="cap">Resultados com preenchimentos aleatórios.</figcaption>
           </figure>
         </div>
@@ -242,6 +254,6 @@
   </footer>
 </div>
 </div>
-<script src="js/main.js?v=20261018"></script>
+<script src="js/main.js?v=20261019"></script>
 </body>
 </html>
