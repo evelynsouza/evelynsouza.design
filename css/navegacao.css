@@ -5,3 +5,7 @@
 /* Destinos de âncora param abaixo do cabeçalho fixo (76px) */
 [id]{scroll-margin-top:76px}
 #topo{scroll-margin-top:0}
+/* Fundo da página igual ao rodapé: no Safari/iOS a área atrás da barra inferior
+   e o "elástico" da rolagem mostram o fundo do html, que por padrão é branco. */
+html{background:#171715;transition:background-color .45s cubic-bezier(.22,.7,.2,1)}
+html:has(.site.is-dark){background:#0A0A09}
