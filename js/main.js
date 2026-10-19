@@ -39,6 +39,14 @@
     });
   }
 
+  // Esc fecha o menu aberto e devolve o foco ao botão
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape' || !site.classList.contains('menu-open')) return;
+    setMenu(false);
+    var btn = document.querySelector('[data-click="toggle-menu"]');
+    if (btn) btn.focus();
+  });
+
   /* ---------- Copiar e-mail ---------- */
   var toastTimer;
   function copyEmail(btn) {

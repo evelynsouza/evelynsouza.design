@@ -32,11 +32,13 @@ body{margin:0}
 .site a{color:inherit;text-decoration:none}
 .site ::selection{background:#702632;color:#F4F1EA}
 .site :focus-visible{outline:2px solid var(--focus);outline-offset:4px;border-radius:2px}
-.skip{position:absolute;left:16px;top:-80px;z-index:30;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:6px;font-size:14px;font-weight:600}
-.skip:focus{top:12px}
+.site .skip{position:absolute;left:16px;top:-80px;z-index:30;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:6px;font-size:14px;font-weight:600}
+.site .skip:focus{top:12px}
 .eyebrow{margin:0;display:inline-flex;align-items:center;flex-wrap:wrap;gap:8px 14px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .eyebrow .n{color:var(--accent-ink);font-variant-numeric:tabular-nums}
 .accent{color:var(--accent)}
+/* No tema escuro o bordô base (#8E3544) fica abaixo de 3:1 como texto; usa o tom claro da paleta */
+.is-dark .accent{color:#B04A5A}
 .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
 .h2{margin:20px 0 0;font-size:clamp(32px,4cqi,60px);line-height:1.08;font-weight:600;letter-spacing:-.04em}
 .lede{margin:0;font-size:18px;line-height:1.65;color:var(--ink-2)}
@@ -66,8 +68,8 @@ body{margin:0}
 .nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:10px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
 .nav a:hover{color:var(--ink)}
 .nav a:hover::after{transform:scaleX(1)}
-.nav a[aria-current="page"]{color:var(--ink)}
-.nav a[aria-current="page"]::after{transform:scaleX(1);height:2px;background:var(--accent)}
+.nav a[aria-current]{color:var(--ink)}
+.nav a[aria-current]::after{transform:scaleX(1);height:2px;background:var(--accent)}
 .nav-wrap{display:flex;align-items:center}
 .menu-btn{display:none;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--ink);cursor:pointer;transition:background-color .2s var(--ease)}
 .menu-btn:hover{background:var(--bg-2)}
@@ -98,6 +100,7 @@ body{margin:0}
 .cover.is-flow img{position:static;display:block;width:100%;height:100%;object-fit:contain;transform:none}
 .cap{margin:14px 0 0;font-size:14px;line-height:1.5;color:var(--muted)}
 .panel{padding:clamp(16px,2.4cqi,36px);border-radius:6px;background:#E8E3D9}
+.panel .cap{color:#5E5952} /* o painel é sempre claro: legenda escura nos dois temas */
 .panel img{display:block;width:100%;height:auto;border-radius:4px}
 
 /* ---------- 01 Contexto e problema ---------- */
@@ -107,6 +110,7 @@ body{margin:0}
 .prob-nums{grid-column:8/-1;align-self:end;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap);margin-top:clamp(32px,3.6cqi,48px)}
 .num{padding-top:24px;border-top:1px solid var(--rule)}
 .num b{display:block;font-size:clamp(64px,7.2cqi,116px);line-height:.9;font-weight:600;letter-spacing:-.06em;color:var(--accent);font-variant-numeric:tabular-nums}
+.is-dark .num b{color:#B04A5A}
 .num span{display:block;margin-top:14px;font-size:16px;line-height:1.5;color:var(--ink-2)}
 .wide-shot{margin:clamp(56px,6cqi,96px) 0 0}
 
@@ -231,7 +235,7 @@ body{margin:0}
   .nav a{min-height:64px;padding:0;font-size:28px;font-weight:600;letter-spacing:-.03em;color:var(--ink);border-top:1px solid var(--rule)}
   .nav a:first-child{border-top:0}
   .nav a::after{display:none}
-  .nav a[aria-current="page"]{color:var(--accent-ink)}
+  .nav a[aria-current]{color:var(--accent-ink)}
   .open-title{grid-column:1/-1}
   .cover.is-flow{margin-inline:calc(var(--pad) * -1);border-radius:0}
   .prob-nums{grid-template-columns:1fr;row-gap:28px}
@@ -241,6 +245,7 @@ body{margin:0}
   .flow li:not(:last-child)::after{display:none}
   .safe-steps{grid-template-columns:1fr;row-gap:20px}
   .ba{grid-template-columns:1fr;row-gap:32px}
+  .ba-item b{font-size:clamp(48px,17cqi,72px)}
   .ba-arrow{display:none}
   .res-text{grid-template-columns:1fr;row-gap:24px}
   .close-nav{flex-direction:column;align-items:flex-start}
