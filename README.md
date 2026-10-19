@@ -30,3 +30,4 @@ Para testar localmente: `python3 -m http.server` dentro da pasta e abra `http://
 - A fonte Manrope é carregada do Google Fonts.
 - A preferência de tema fica salva no navegador (`localStorage`, chave `es-theme`).
 - O e-mail copiado pelo botão de contato é o texto exibido no próprio botão (`.contact-value`).
+- Os links de CSS e JS levam uma versão (`?v=20261018`) para os navegadores não usarem arquivos antigos do cache. Ao publicar mudanças em `css/` ou `js/`, troque esse número em todas as páginas (por exemplo, pela data do dia).
